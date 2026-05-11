@@ -4,6 +4,11 @@
     {
         public CombatEngine()
         {
+           
+        }
+
+        public void fight()
+        {
             while (true)
             {
 

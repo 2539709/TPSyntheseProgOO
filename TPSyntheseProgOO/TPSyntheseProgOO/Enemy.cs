@@ -1,18 +1,14 @@
 ﻿namespace TPSyntheseProgOO
 {
-    abstract class Enemy
+    abstract class Enemy : Character
     {
-        protected Enemy(string name, int lifePoints, int strengthPoints)
+        protected Enemy(string name, int lifePoints, int strengthPoints) : 
+            base(name, lifePoints, strengthPoints)
         {
-            _name = name;
-            _lifePoints = lifePoints;
-            StrenghtPoints = strengthPoints;
+           
         }
 
-        protected int StrenghtPoints { get; }
-
-        private readonly string _name;
-        private readonly int _lifePoints;
+        
         
     }
 }
