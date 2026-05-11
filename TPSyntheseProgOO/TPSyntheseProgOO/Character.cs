@@ -5,20 +5,25 @@
         protected Character(string name, int lifePoints, int strengthPoints)
         {
             Name = name;
-            LifePoints = lifePoints;
+            _lifePoints = lifePoints;
             MaxLifePoints = lifePoints;
-            StrengthPoints = strengthPoints;
+            _strengthPoints = strengthPoints;
         }
 
         public string Name { get; }
-        public int LifePoints { get; private set; }
-        public int StrengthPoints { get; private set; }
+        public int LifePoints { get { return _lifePoints; } }
+        public int StrengthPoints { get { return _strengthPoints; } }
         public int MaxLifePoints { get; }
 
 
         protected abstract int AttackDamage();
 
         protected abstract int DamageReceived(int damage);
+
+
+        // Les attributs
+        private int _lifePoints;
+        private int _strengthPoints;
 
     }
 }

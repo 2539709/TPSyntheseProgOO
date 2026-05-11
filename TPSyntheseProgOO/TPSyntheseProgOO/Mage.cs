@@ -1,11 +1,15 @@
 ﻿namespace TPSyntheseProgOO
 {
     class Mage : Hero
-    {
+    {   
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="level"></param>
         public Mage(int level) : 
             base("Doric", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
         {
-            MagicPoints = StartingMagicPoints;
+            _magicPoints = StartingMagicPoints;
         }
 
         protected override int AttackDamage()
@@ -31,7 +35,7 @@
                 }
                 if (choix == "2")
                 {
-                    MagicPoints -= MagicAttack;
+                    _magicPoints -= MagicAttack;
                     return MagicAttack * Level;
                 }
                 
@@ -45,12 +49,19 @@
             return damage - ProtectionPoints;
         }
 
-        public int MagicPoints { get; private set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int MagicPoints { get { return _magicPoints; } }
 
+        //Les constantes
         private const int StartingLifePoints = 40;
         private const int StartingStrengthPoints = 5;
         private const int StartingProtectionPoints = 0;
         private const int StartingMagicPoints = 50;
         private const int MagicAttack = 20;
+
+        // Les attributs
+        private int _magicPoints;
     }
 }

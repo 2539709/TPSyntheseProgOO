@@ -6,15 +6,16 @@
             base(name, lifePoints, strengthPoints)
         {
             Level = level;
-            ProtectionPoints = protectionPoints;
+            _protectionPoints = protectionPoints;
             Inventory = new();
         }
 
         public int Level { get; }
 
-        public int ProtectionPoints { get; private set; }
+        public int ProtectionPoints { get { return _protectionPoints; } }
 
         public Inventory Inventory { get; }
+        private int _protectionPoints;
 
         
         
