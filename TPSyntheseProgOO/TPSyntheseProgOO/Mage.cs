@@ -47,10 +47,9 @@
 
         public int MagicPoints { get; private set; }
 
-        private const int Zero = 0;
         private const int StartingLifePoints = 40;
         private const int StartingStrengthPoints = 5;
-        private const int StartingProtectionPoints = Zero;
+        private const int StartingProtectionPoints = 0;
         private const int StartingMagicPoints = 50;
         private const int MagicAttack = 20;
     }
