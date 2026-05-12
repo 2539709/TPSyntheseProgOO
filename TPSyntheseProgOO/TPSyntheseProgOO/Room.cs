@@ -146,8 +146,7 @@ namespace TPSyntheseProgOO
             }
             #endregion
 
-            bool inRoom = true;
-            while (inRoom)
+            while (true)
             {
                 string choix;
 
@@ -180,9 +179,7 @@ namespace TPSyntheseProgOO
                 }
             }
 
-            return -1;
         }
-
 
         // Méthode qui permet d'ajouter une virgule ou pas à la fin d'un text
         private string AddVirgule(string text)
