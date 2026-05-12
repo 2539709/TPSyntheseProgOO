@@ -17,6 +17,8 @@
             return damage - ProtectionPoints;
         }
 
+        public override bool CanUseWeapon { get { return true; } }
+
 
         private const int StartingLifePoints = 80;
         private const int StartingStrengthPoints = 10;

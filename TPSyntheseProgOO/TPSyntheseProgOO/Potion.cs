@@ -7,6 +7,11 @@
         {
             _lifePoints = lifePoints;
         }
+        public override void ApplyEffect(Hero hero)
+        {
+            hero.AddLifePoints(LifePoints);
+           
+        }
 
         public int LifePoints { get { return _lifePoints; } }
 

@@ -6,5 +6,10 @@
         {
             
         }
+
+        public override void ApplyEffect(Hero hero)
+        {
+            hero.Win();
+        }
     }
 }

@@ -7,7 +7,7 @@
            
         }
 
-        public void fight()
+        public void Fight( Hero hero)
         {
             while (true)
             {

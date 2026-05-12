@@ -12,6 +12,11 @@
         public string Name { get { return _name; } }
         public string Article { get { return _article; } }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool Equals(Item? other)
         {
             if (other == null)
@@ -21,6 +26,12 @@
 
             return GetType() == other.GetType() && Name == other.Name;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public int CompareTo(Item? other)
         {
             if (other == null)
@@ -30,6 +41,24 @@
             return Name.CompareTo(other.Name);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hero"></param>
+        public abstract void ApplyEffect(Hero hero);
+
+        /// <summary>
+        /// Permet de savoir si un item peut être réutilisé
+        /// </summary>
+        public virtual bool IsConsumable { get { return true; } }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Print()
+        {
+            Console.WriteLine(" - " + _article + _name);
+        }
        
 
         // Les attributs

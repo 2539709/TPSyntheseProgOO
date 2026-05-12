@@ -54,6 +54,20 @@
         /// </summary>
         public int MagicPoints { get { return _magicPoints; } }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public override bool CanUseGem { get { return true; } }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="points"></param>
+        public override void AddMagicPoints(int points)
+        {
+            _magicPoints += points;
+        }
+
         //Les constantes
         private const int StartingLifePoints = 40;
         private const int StartingStrengthPoints = 5;
