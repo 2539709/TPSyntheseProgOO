@@ -20,6 +20,7 @@
             }
             return damage;
         }
+        
 
         private const int StartingLifePoints = 80;
         private const int StartingStrengthPoints = 10;

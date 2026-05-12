@@ -1,4 +1,6 @@
-﻿namespace TPSyntheseProgOO
+﻿using System.Security.AccessControl;
+
+namespace TPSyntheseProgOO
 {
     class Room
     {   
@@ -23,7 +25,7 @@
 
                 switch (enemyLine)
                 {
-                    case "0":
+                    case "O":
                         _enemy = new Orc();
                         break;
                     case "T":
@@ -65,7 +67,11 @@
             }
         }
 
-        public void Visit(Hero hero)
+        /// <summary>
+        /// Affiche les informations des pièces lors de la navigation
+        /// </summary>
+        /// <param name="hero">Le héro sélectionné pour la partie</param>
+        public int Visit(Hero hero, bool canGoBack)
         {
             string line = new string('~', _name.Length + 6);
             Console.WriteLine(line);
@@ -73,8 +79,10 @@
             Console.WriteLine(line);
             Console.WriteLine(_description);
 
+
             if (_items.Count > 0)
-            {
+            {   
+                // Afficher les items dans une pièce
                 Console.WriteLine("La pièce contient " + _items.Count + " objet" + 
                     (_items.Count > 1 ? "s" : "" ) + ":");
 
@@ -84,7 +92,106 @@
                 }
             }
 
-           
+            #region Doors
+
+            string doors = "";
+
+            if (_leftRoom != - 1)
+            {
+                doors = AddVirgule(doors) + "une porte à gauche";
+            }
+
+            if (_forwardRoom != -1)
+            {
+                doors = AddVirgule(doors) + "une porte en avant";
+            }
+
+            if (_rightRoom != -1)
+            {
+                doors = AddVirgule(doors) + "une porte à droite";
+            }
+
+            if (doors != "")
+            {
+                Console.WriteLine("Il y a " + doors);
+            }
+            #endregion
+
+            #region Mini-Menu
+            Console.WriteLine("I) Voir l'inventaire");
+
+            if (_items.Count > 0)
+            {
+                Console.WriteLine("O) Ramasser les objets");
+            }
+
+            if (_leftRoom != -1)
+            {
+                Console.WriteLine("G) Aller à gauche");
+            }
+
+            if (_forwardRoom != - 1)
+            {
+                Console.WriteLine("A) Aller en avant");
+            }
+
+            if (_rightRoom != - 1)
+            {
+                Console.WriteLine("D) Aller à droite");
+            }
+
+            if (canGoBack)
+            {
+                Console.WriteLine("R) Retourner à la pièce précédente ");
+            }
+            #endregion
+
+            bool inRoom = true;
+            while (inRoom)
+            {
+                string choix;
+
+                Console.Write("> ");
+                string? temp = Console.ReadLine();
+                choix = temp == null ? "" : temp.ToUpper();
+
+                switch (choix)
+                {
+                    case "I":
+                        hero.Inventory.Print();
+                        break;
+                    case "O":
+                        foreach (var item in _items)
+                        {
+                            hero.Inventory.Add(item);
+                        }
+                        _items.Clear();
+                        break;
+                    case "G":
+                        return _leftRoom;
+                    case "A":
+                        return _forwardRoom;
+                    case "D":
+                        return _rightRoom;
+                    case "R":
+                        return -1;
+                    default:
+                        break;
+                }
+            }
+
+            return -1;
+        }
+
+
+        // Méthode qui permet d'ajouter une virgule ou pas à la fin d'un text
+        private string AddVirgule(string text)
+        {
+            if (text != "")
+            {
+                return text += ", ";
+            }
+            return text;
         }
 
         // Les attributs

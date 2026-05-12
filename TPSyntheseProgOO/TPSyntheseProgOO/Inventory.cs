@@ -11,7 +11,7 @@
         /// Ajoute un item dans la liste
         /// </summary>
         /// <param name="item"></param>
-        public void AddItem(Item item)
+        public void Add(Item item)
         {
             int index = _items.IndexOf(item);
 
@@ -29,7 +29,7 @@
         /// <summary>
         /// Affiche les items
         /// </summary>
-        public void PrintItem()
+        public void Print()
         {
             if (_items.Count == 0)
             {
