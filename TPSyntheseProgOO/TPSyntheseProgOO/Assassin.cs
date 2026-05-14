@@ -3,7 +3,7 @@
     class Assassin : Enemy
     {
         public Assassin() :
-            base ("Assassin", StartingLifePoints, StartingStrengthPoints)
+            base ("un assassin", StartingLifePoints, StartingStrengthPoints)
         {
             
         }

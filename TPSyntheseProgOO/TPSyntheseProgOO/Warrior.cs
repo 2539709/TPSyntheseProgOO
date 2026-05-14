@@ -2,7 +2,7 @@
 {
     class Warrior : Hero
     {
-        public Warrior(int level) : base("Throd", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
+        public Warrior(int level) : base("Throd, le guerrier", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
         {
             
         }
