@@ -1,6 +1,6 @@
 ﻿try
 {
-    Console.WriteLine("Le programme compile");
+    Console.WriteLine("Le programme compile.");
 }
 catch (Exception)
 {
