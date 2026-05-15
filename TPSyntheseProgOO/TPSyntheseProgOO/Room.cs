@@ -75,7 +75,7 @@ namespace TPSyntheseProgOO
         {
             string line = new string('~', _name.Length + 6);
             Console.WriteLine(line);
-            Console.WriteLine("~  " + _name + "   ~");
+            Console.WriteLine("~   " + _name + "   ~");
             Console.WriteLine(line);
             Console.WriteLine(_description);
 
@@ -99,6 +99,7 @@ namespace TPSyntheseProgOO
             if (_leftRoom != - 1)
             {
                 doors = AddVirgule(doors) + "une porte à gauche";
+                
             }
 
             if (_forwardRoom != -1)
@@ -203,4 +204,6 @@ namespace TPSyntheseProgOO
         private const string ItemSeparator = ";";
 
     }
+
+
 }
