@@ -87,9 +87,7 @@ namespace TPSyntheseProgOO
                 // Ennemi
                 if (_enemy != null && _enemy.LifePoints > 0)
                 {
-                    string enemyDisplay = _enemy.Name;
-                    string msg = char.ToUpper(enemyDisplay[0]) + enemyDisplay.Substring(1);
-                    Console.WriteLine("\n" + msg + " se trouve dans la pièce");
+                    Console.WriteLine("\nUn " + _enemy.Name + " se trouve dans la pièce");
                 }
 
                 // Items

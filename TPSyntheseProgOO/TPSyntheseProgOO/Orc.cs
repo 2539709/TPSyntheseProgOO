@@ -3,7 +3,7 @@
     class Orc : Enemy
     {
         public Orc() : 
-            base("Un orque", StartingLifePoints, StartingStrengthPoints)
+            base("orque", "l'", StartingLifePoints, StartingStrengthPoints)
         {
             
         }

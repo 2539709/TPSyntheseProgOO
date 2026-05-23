@@ -64,7 +64,7 @@
             Console.WriteLine();
             if (hero.LifePoints > 0)
             {
-                Console.WriteLine($"Défaite de {enemy.Name}");
+                Console.WriteLine($"Défaite de {enemy.DefeatArticle}{enemy.Name}");
             }
 
             else
