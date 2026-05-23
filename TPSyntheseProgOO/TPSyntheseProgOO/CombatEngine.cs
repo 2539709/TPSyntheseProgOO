@@ -19,9 +19,9 @@
                 PrintStats(hero, enemy);
                 Console.WriteLine();
 
-                int enemyBefore = enemy.LifePoints;
+                int enemyLifePointsBefore = enemy.LifePoints;
                 hero.Attack(enemy);
-                int damage = enemyBefore - enemy.LifePoints;
+                int damage = enemyLifePointsBefore - enemy.LifePoints;
                 Console.WriteLine($"Attaque de {hero.Name}");
                 Console.WriteLine($"  Dommage: {damage}");
 
@@ -42,9 +42,9 @@
                 PrintStats(hero, enemy);
                 Console.WriteLine();
 
-                int heroBefore = hero.LifePoints;
+                int heroLifePointsBefore = hero.LifePoints;
                 enemy.Attack(hero);
-                int damageHero = heroBefore - hero.LifePoints;
+                int damageHero = heroLifePointsBefore - hero.LifePoints;
                 Console.WriteLine($"Attaque de {enemy.Name}");
                 if (damageHero == 0)
                 {
