@@ -63,7 +63,7 @@ try
             break;
     }
 
-    Console.WriteLine($"\n{hero.Name}, {heroClass} de niveau {level}");
+    Console.WriteLine($"\n{hero.Name} de niveau {level}");
     Console.WriteLine("\nAppuyer sur une touche pour continuer...");
     Console.ReadKey();
     

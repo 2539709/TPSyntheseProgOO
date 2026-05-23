@@ -2,7 +2,7 @@
 {
     class Troll : Enemy
     {
-        public Troll() : base ("troll", "le", StartingLifePoints, StartingStrengthPoints )
+        public Troll() : base ("troll", "le ", StartingLifePoints, StartingStrengthPoints )
         {
             
         }
