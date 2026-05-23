@@ -64,6 +64,7 @@
             _hasWon = true;
         }
 
+
         // Les attributs
         private int _protectionPoints;
         private Weapon? _equippedWeapon;

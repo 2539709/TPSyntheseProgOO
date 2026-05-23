@@ -44,7 +44,7 @@
             }
             else
             {
-                Console.WriteLine("Partie terminée, vous êtes mort au combat");
+                Console.WriteLine("\nPartie terminée, vous êtes mort au combat");
             }
 
             Console.WriteLine("Appuyez sur une touche pour continuer...");

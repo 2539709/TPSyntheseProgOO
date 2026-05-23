@@ -3,43 +3,92 @@
     class CombatEngine
     {
 
-        public static void Fight( Hero hero, Enemy enemy)
+        public static void Fight(Hero hero, Enemy enemy)
         {
             string title = $"=   Combat entre {hero.Name} et {enemy.Name}   =";
             string ligne = new string('=', title.Length);
-            Console.WriteLine(ligne);
-            Console.WriteLine(title);
-            Console.WriteLine(ligne);
 
             while (hero.LifePoints > 0 && enemy.LifePoints > 0)
             {
-                hero.Attack(enemy);
+                // Attaque du héros
+                Console.Clear();
+                Console.WriteLine(ligne);
+                Console.WriteLine(title);
+                Console.WriteLine(ligne);
+                Console.WriteLine();
+                PrintStats(hero, enemy);
+                Console.WriteLine();
 
-                if (enemy.LifePoints > 0)
+                int enemyBefore = enemy.LifePoints;
+                hero.Attack(enemy);
+                int damage = enemyBefore - enemy.LifePoints;
+                Console.WriteLine($"Attaque de {hero.Name}");
+                Console.WriteLine($"  Dommage: {damage}");
+
+                if (enemy.LifePoints <= 0)
                 {
-                    enemy.Attack(hero);
+                    break;
+                }
+
+                Console.WriteLine("\nAppuyer sur une touche pour continuer...");
+                Console.ReadKey();
+
+                // Attaque de l'ennemi
+                Console.Clear();
+                Console.WriteLine(ligne);
+                Console.WriteLine(title);
+                Console.WriteLine(ligne);
+                Console.WriteLine();
+                PrintStats(hero, enemy);
+                Console.WriteLine();
+
+                int heroBefore = hero.LifePoints;
+                enemy.Attack(hero);
+                int damageHero = heroBefore - hero.LifePoints;
+                Console.WriteLine($"Attaque de {enemy.Name}");
+                if (damageHero == 0)
+                {
+                    Console.WriteLine("  Attaque esquivée, aucun dommage infligé");
+                }
+                else
+                {
+                    Console.WriteLine($"  Dommage: {damageHero}");
+                }                    
+                if (hero.LifePoints > 0)
+                {
+                    Console.WriteLine("\nAppuyer sur une touche pour continuer...");
+                    Console.ReadKey();
                 }
             }
+
+            Console.WriteLine();
+            if (hero.LifePoints > 0)
+            {
+                Console.WriteLine($"Défaite de {enemy.Name}");
+            }
+
+            else
+            {
+                Console.WriteLine($"Défaite de {hero.Name}");
+            }
+                
         }
 
-        private static void PrintHeroStats(Hero hero)
+        private static void PrintStats(Hero hero, Enemy enemy)
         {
-            int barreLength = hero.LifePoints * 10 / hero.MaxLifePoints;
-            string barre = new string('=', barreLength) + new string(' ', 10 - barreLength);
-            Console.WriteLine($"{hero.Name}");
-            Console.WriteLine($"Vie:  {hero.LifePoints}/{hero.MaxLifePoints} [{barre}]");
-            Console.WriteLine($"Force: {hero.StrengthPoints}");
-            Console.WriteLine($"Niveau: {hero.Level}");
-            Console.WriteLine($"Protection: {hero.ProtectionPoints}");
-        }
+            int herroBarre = hero.LifePoints * 10 / hero.MaxLifePoints;
+            string heroBarreProgression = new string('=', herroBarre) + new string(' ', 10 - herroBarre);
+            int enemyBarre = enemy.LifePoints * 10 / enemy.MaxLifePoints;
+            string enemyBarreProgression = new string('=', enemyBarre) + new string(' ', 10 - enemyBarre);
 
-        private static void PrintEnemyStats(Enemy enemy)
-        {
-            int barreLength = enemy.LifePoints * 10 / enemy.MaxLifePoints;
-            string barre = new string('=', barreLength) + new string(' ', 10 - barreLength);
-            Console.WriteLine($"{enemy.Name}");
-            Console.WriteLine($"Vie:  {enemy.LifePoints}/{enemy.MaxLifePoints} [{barre}]");
-            Console.WriteLine($"Force: {enemy.StrengthPoints}");
+            Console.WriteLine(($"\t{hero.Name}").PadRight(45) + $"\t{enemy.Name}");
+            Console.WriteLine(($"\tVie:  {hero.LifePoints}/{hero.MaxLifePoints} " +
+                $"[{heroBarreProgression}]").PadRight(45) +
+                $"\tVie:  {enemy.LifePoints}/{enemy.MaxLifePoints} [{enemyBarreProgression}]");
+            Console.WriteLine(($"\tForce: {hero.StrengthPoints}").PadRight(45) +
+                $"\tForce: {enemy.StrengthPoints}");
+            Console.WriteLine($"\tNiveau: {hero.Level}");
+            Console.WriteLine($"\tProtection: {hero.ProtectionPoints}");
         }
 
 
