@@ -62,6 +62,7 @@ namespace TPSyntheseProgOO
                         default:
                             break;
                     }
+                    itemLine = input.ReadLine();
                 }
 
             }
@@ -73,9 +74,10 @@ namespace TPSyntheseProgOO
         /// <param name="hero">Le héro sélectionné pour la partie</param>
         public int Visit(Hero hero, bool canGoBack)
         {
+            Console.Clear();
             string line = new string('~', _name.Length + 6);
             Console.WriteLine(line);
-            Console.WriteLine("~  " + _name + "   ~");
+            Console.WriteLine("~  " + _name + "  ~");
             Console.WriteLine(line);
             Console.WriteLine(_description);
 
@@ -116,6 +118,7 @@ namespace TPSyntheseProgOO
                 Console.WriteLine("Il y a " + doors);
             }
             #endregion
+
 
             #region Mini-Menu
             Console.WriteLine("I) Voir l'inventaire");

@@ -1,0 +1,5 @@
+Le Laboratoire d'Alchimie
+Des éclats de verre coloré crissent sous vos bottes. Des alambics complexes et des cornues s'élèvent sur les paillasses de pierre. Une étrange fumée violette s'échappe encore d'un chaudron renversé, rampant sur le sol comme si elle était dotée d'une volonté propre.
+::
+
+potion;Nectar de Varigilos;le ;20

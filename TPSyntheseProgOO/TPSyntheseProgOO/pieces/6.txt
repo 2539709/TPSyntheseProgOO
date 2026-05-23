@@ -1,0 +1,5 @@
+La Bibliothèque Oubliée
+Des milliers de grimoires et de parchemins tombent en poussière sur des étagères qui s'étendent jusqu'au plafond voûté. Une odeur de vieux papier et de moisissure imprègne l'air. Au centre, un bureau en acajou supporte un sablier dont le sable noir ne s'écoule pas.
+7::8
+
+potion;Nectar de Varigilos;le ;20

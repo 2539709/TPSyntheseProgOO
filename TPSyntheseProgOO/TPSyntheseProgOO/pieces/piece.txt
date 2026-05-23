@@ -1,0 +1,13 @@
+Nom
+Description
+Index des pièces accessibles, Gauche:Avant:Droit
+Ennemi: vide, O (orque), T (troll), A (assassin)
+Items: Liste d'items (vide ou un par ligne)
+--------------------------
+Items
+-----
+arme;nom;article;dommage
+armure;nom;article;protection
+potion;nom;article;points de vie
+pierre;nom;article;points de magie
+amulette;nom;article

@@ -1,0 +1,7 @@
+Le Scriptorium Arcane
+Les murs de cette pièce circulaire sont recouverts de runes luminescentes qui oscillent entre le bleu et le rouge. Des pupitres de lecture entourent un piédestal central où flotte une unique plume d'oie noire, figée dans les airs.
+::
+
+pierre;Klokolium irisée;la ;40
+pierre;Barbonate chatoyante;la ;20
+pierre;Klokolium irisée;la ;40

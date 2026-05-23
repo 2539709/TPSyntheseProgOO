@@ -1,0 +1,6 @@
+Le Réfectoire Déchu
+Une longue table de banquet en chêne s'étire au milieu de la pièce, brisée en deux. Des assiettes en étain terni et des gobelets renversés tapissent le sol. Au mur, une immense tapisserie déchirée dépeint un roi dont le visage a été soigneusement découpé.
+:3:
+
+potion;Sirop de Boulorne;le ;40
+pierre;Barbonate chatoyante;la ;20

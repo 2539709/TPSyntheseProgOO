@@ -1,0 +1,7 @@
+L'Armurerie Pillée
+Les râteliers d'armes fixés aux murs sont désespérément vides, à l'exception de quelques lances brisées. Cependant, une lourde enclume trône au centre de la pièce, et une trappe dissimulée sous un tas de chaînes rouillées attire votre regard.
+9::
+A
+armure;Armure de Khornettoh;l';3
+arme;Hache de Goltror;la ;5
+arme;Épée de Blizdand;l';8

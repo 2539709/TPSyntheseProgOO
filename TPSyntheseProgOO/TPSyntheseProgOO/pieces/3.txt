@@ -1,0 +1,6 @@
+La Cuisine des Rats
+Une odeur de rance et de viande avariée vous prend à la gorge. De gigantesques marmites en fonte pendent encore au-dessus de foyers éteints depuis des lustres. Au moindre de vos pas, le sol semble s'animer
+::
+O
+potion;Sirop de Boulorne;le ;40
+arme;Poignard de Thlieu;le ;2

@@ -1,0 +1,5 @@
+Le Corps de Garde Abandonné
+Des lits de camp en bois pourri et des armures rouillées jonchent le sol de cette pièce fortifiée. Une lourde herse en fer bloque le couloir de droite. Au centre, une table de jeu de dés est restée intacte, comme si les gardes s'étaient volatilisés en pleine partie.
+5::6
+
+armure;Bouclier d'Altrouille;le ;5
