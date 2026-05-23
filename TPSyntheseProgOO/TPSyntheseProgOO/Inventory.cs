@@ -42,7 +42,7 @@
             for (int i = 0; i < _items.Count; i++)
             {
                 string quantite = _quantities[i] > 1 ? "[ " + _quantities[i] + "]" : "";
-                Console.WriteLine(" " + (i + 1) + ")" + _items[i].Article + _items[i].Name + quantite);
+                Console.WriteLine(" " + (i + 1) + ") " + _items[i].Article + _items[i].Name + quantite);
             }
             Console.WriteLine(" 0) Retour");
 
