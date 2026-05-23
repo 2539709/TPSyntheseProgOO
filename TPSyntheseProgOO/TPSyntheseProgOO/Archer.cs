@@ -2,7 +2,7 @@
 {
     class Archer : Hero
     {
-        public Archer(int level) : base("Elwena", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
+        public Archer(int level) : base("Elwena, l'archère", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
         {
             
         }
