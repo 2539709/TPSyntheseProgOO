@@ -29,7 +29,7 @@ try
     // Gestion du niveau    
     const int MinLevel = 1;
     const int MaxLevel = 4;
-    Console.Write($"Indiquez le niveau (entre {MinLevel} et {MaxLevel}): ");
+    Console.Write($"\nIndiquez le niveau (entre {MinLevel} et {MaxLevel}): ");
     string tempLevel = Console.ReadLine();
     int level;
     try

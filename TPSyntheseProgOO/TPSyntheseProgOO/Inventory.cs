@@ -7,6 +7,8 @@
             
         }
 
+        public bool IsEmpty { get { return _items.Count == 0; } }
+
         /// <summary>
         /// Ajoute un item dans la liste
         /// </summary>
@@ -46,23 +48,24 @@
 
         }
 
-        public void UseItem(Item item, Hero hero)
-        {   
-            int index = _items.IndexOf(item);
-
+        public void UseItem(int index, Hero hero)
+        {
+            if (index < 0 || index >= _items.Count)
+            {
+                Console.WriteLine("Choix invalide");
+                return;
+            }
+            Item item = _items[index];
             item.ApplyEffect(hero);
-
             if (item.IsConsumable)
             {
-                // Enlève la quantité si un item ne doit pas être réutilisé
                 _quantities[index]--;
                 if (_quantities[index] == 0)
                 {
                     _items.RemoveAt(index);
                     _quantities.RemoveAt(index);
                 }
-            }       
-    
+            }
         }
 
         // Les attributs
