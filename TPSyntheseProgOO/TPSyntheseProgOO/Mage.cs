@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="level"></param>
         public Mage(int level) : 
-            base("Doric, le mage", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
+            base("Doric, le mager", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
         {
             _magicPoints = StartingMagicPoints;
         }
