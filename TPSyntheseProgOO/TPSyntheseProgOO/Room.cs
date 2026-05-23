@@ -74,7 +74,7 @@ namespace TPSyntheseProgOO
         /// <param name="hero">Le héro sélectionné pour la partie</param>
         public int Visit(Hero hero, bool canGoBack)
         {
-            while (true)
+            while (!hero.HasWon && hero.LifePoints > 0)
             {
                 Console.Clear();
 
@@ -160,7 +160,7 @@ namespace TPSyntheseProgOO
                         hero.Inventory.Print();
                         if (!hero.Inventory.IsEmpty)
                         {
-                            Console.Write("\n> ");
+                            Console.Write("\nChoix: ");
                             string? tempInv = Console.ReadLine();
                             int choixInventaire;
                             if (int.TryParse(tempInv, out choixInventaire) && choixInventaire != 0)
@@ -168,8 +168,11 @@ namespace TPSyntheseProgOO
                                 hero.Inventory.UseItem(choixInventaire - 1, hero);
                             }
                         }
-                        Console.WriteLine("Appuyer sur une touche pour continuer...");
-                        Console.ReadKey();
+                        if (!hero.HasWon && hero.LifePoints > 0)
+                        {
+                            Console.WriteLine("Appuyer sur une touche pour continuer...");
+                            Console.ReadKey();
+                        }
                         break;
                     case "C":
                         Console.Clear();
@@ -194,6 +197,7 @@ namespace TPSyntheseProgOO
                     case "R": return -1;
                 }
             }
+            return 0;
         }
 
         // Méthode qui permet d'ajouter une virgule ou pas à la fin d'un text
