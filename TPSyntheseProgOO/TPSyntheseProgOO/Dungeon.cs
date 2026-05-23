@@ -1,6 +1,7 @@
 ﻿namespace TPSyntheseProgOO
 {
     class Dungeon
+<<<<<<< HEAD
     {   
         /// <summary>
         /// 
@@ -54,6 +55,11 @@
         private const int PieceNumber = 10;
         private Stack<int> _history = new();
         private Room[] _rooms = new Room[PieceNumber];
+=======
+    {
+        
+        private Stack<Room> _rooms;
+>>>>>>> 1d42e3ed772ae28ac01020502c1b04849f3f400e
         private Hero _hero;
     }
 }

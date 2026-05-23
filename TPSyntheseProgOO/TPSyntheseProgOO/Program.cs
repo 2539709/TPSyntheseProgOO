@@ -2,6 +2,7 @@
 
 try
 {
+<<<<<<< HEAD
     string title = "~          Le donjon de Zangdarax          ~";
     string ligne = new('~', title.Length);
     Console.WriteLine(ligne);
@@ -73,6 +74,9 @@ try
     Dungeon dungeon = new Dungeon(FolderPath, hero);
     dungeon.Play();
 
+=======
+    Console.WriteLine("Le programme compile.");
+>>>>>>> 1d42e3ed772ae28ac01020502c1b04849f3f400e
 }
 catch (Exception)
 {
