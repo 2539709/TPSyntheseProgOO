@@ -79,7 +79,7 @@ try
     }
 
 }
-catch (Exception)
+catch (Exception ex)
 {
-    Console.WriteLine("ERREUR: Une erreur inattendue s'est produite.");
+    Console.WriteLine("ERREUR: " + ex.Message);
 }
