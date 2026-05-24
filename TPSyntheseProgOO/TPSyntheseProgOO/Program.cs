@@ -1,5 +1,4 @@
 ﻿using TPSyntheseProgOO;
-
 try
 {
     string title = "~          Le donjon de Zangdarax          ~";
@@ -30,7 +29,7 @@ try
     const int MinLevel = 1;
     const int MaxLevel = 4;
     Console.Write($"\nIndiquez le niveau (entre {MinLevel} et {MaxLevel}): ");
-    string tempLevel = Console.ReadLine();
+    string? tempLevel = Console.ReadLine();
     int level;
     try
     {
@@ -50,28 +49,34 @@ try
 
     // Création du héros
     Hero hero = new Warrior(level);
-    string heroClass = "le guerrier";
     switch (choixHero)
     {
         case "M":
             hero = new Mage(level);
-            heroClass = "le mage";
             break;
         case "A":
             hero = new Archer(level);
-            heroClass = "l'archère";
             break;
     }
 
     Console.WriteLine($"\n{hero.Name} de niveau {level}");
     Console.WriteLine("\nAppuyer sur une touche pour continuer...");
     Console.ReadKey();
-    
+
 
     // Lancement du jeu
     const string FolderPath = "../../../pieces/";
-    Dungeon dungeon = new Dungeon(FolderPath, hero);
-    dungeon.Play();
+    try
+    {
+        Dungeon dungeon = new Dungeon(FolderPath, hero);
+        dungeon.Play();
+    }
+    catch (Exception)
+    {
+        Console.WriteLine("ERREUR: Pièce invalide");
+        Console.WriteLine("Appuyez sur une touche pour continuer...");
+        Console.ReadKey();
+    }
 
 }
 catch (Exception)
