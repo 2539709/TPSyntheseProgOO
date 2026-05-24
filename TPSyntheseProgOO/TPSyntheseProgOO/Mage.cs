@@ -1,17 +1,23 @@
 ﻿namespace TPSyntheseProgOO
 {
+    /// <summary>
+    /// Héros de type mage, peut utiliser des gemmes et dispose d'une attaque magique
+    /// </summary>
     class Mage : Hero
-    {   
+    {
         /// <summary>
-        /// 
+        /// Constructeur
         /// </summary>
-        /// <param name="level"></param>
+        /// <param name="level">Le niveau du mage</param>
         public Mage(int level) : 
             base("Doric, le mage", StartingLifePoints, StartingStrengthPoints, level, StartingProtectionPoints)
         {
             _magicPoints = StartingMagicPoints;
         }
 
+        /// <summary>
+        /// Retourne les dommages infligés : attaque de base ou attaque magique si assez de points de magie
+        /// </summary>
         protected override int AttackDamage()
         {
            
@@ -44,25 +50,29 @@
             
         }
 
+        /// <summary>
+        /// Retourne les dommages reçus après soustraction des points de protection
+        /// </summary>
+        /// <param name="damage">Les dommages bruts reçus</param>
         protected override int DamageReceived(int damage)
         {
             return damage - ProtectionPoints;
         }
 
         /// <summary>
-        /// 
+        /// Retourne les points de magie du mage
         /// </summary>
         public override int MagicPoints { get { return _magicPoints; } }
 
         /// <summary>
-        /// 
+        /// Le mage peut utiliser des gemmes
         /// </summary>
         public override bool CanUseGem { get { return true; } }
 
         /// <summary>
-        /// 
+        /// Ajoute des points de magie au mage
         /// </summary>
-        /// <param name="points"></param>
+        /// <param name="points">Le nombre de points à ajouter</param>
         public override void AddMagicPoints(int points)
         {
             _magicPoints += points;

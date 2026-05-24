@@ -1,8 +1,15 @@
 ﻿namespace TPSyntheseProgOO
 {
+    /// <summary>
+    /// Classe qui gère le déroulement des combats entre un héros et un ennemi
+    /// </summary>
     class CombatEngine
     {
-
+        /// <summary>
+        /// Lance et gère le combat tour par tour entre un héros et un ennemi
+        /// </summary>
+        /// <param name="hero">Le héros qui combat</param>
+        /// <param name="enemy">L'ennemi à combattre</param>
         public static void Fight(Hero hero, Enemy enemy)
         {
             string title = $"=   Combat entre {hero.Name} et {enemy.Name}   =";
@@ -74,6 +81,7 @@
                 
         }
 
+        //Affiche les statistiques du héros et de l'ennemi
         private static void PrintStats(Hero hero, Enemy enemy)
         {
             int herroBarre = hero.LifePoints * 10 / hero.MaxLifePoints;

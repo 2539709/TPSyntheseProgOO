@@ -1,7 +1,15 @@
 ﻿namespace TPSyntheseProgOO
 {
+    /// <summary>
+    /// Classe abstraite représentant un objet ramassable dans le donjon
+    /// </summary>
     abstract class Item : IComparable<Item>, IEquatable<Item>
     {
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="name">Le nom de l'objet</param>
+        /// <param name="article">L'article associé au nom (ex: "le ", "l'")</param>
         protected Item(string name, string article)
         {
             _name = name;
@@ -13,10 +21,10 @@
         public string Article { get { return _article; } }
 
         /// <summary>
-        /// 
+        /// Vérifie si deux items sont identiques (même type et même nom)
         /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+        /// <param name="other">L'item à comparer</param>
+        /// <returns>True si les items sont identiques, false sinon</returns>
         public bool Equals(Item? other)
         {
             if (other == null)
@@ -28,10 +36,10 @@
         }
 
         /// <summary>
-        /// 
+        /// Compare deux items par ordre alphabétique selon leur nom
         /// </summary>
-        /// <param name="other"></param>
-        /// <returns></returns>
+        /// <param name="other">L'item à comparer</param>
+        /// <returns>Un entier négatif, zéro ou positif selon l'ordre</returns>
         public int CompareTo(Item? other)
         {
             if (other == null)
@@ -42,9 +50,9 @@
         }
 
         /// <summary>
-        /// 
+        /// Applique l'effet de l'objet sur le héros
         /// </summary>
-        /// <param name="hero"></param>
+        /// <param name="hero">Le héros sur lequel appliquer l'effet</param>
         public abstract void ApplyEffect(Hero hero);
 
         /// <summary>
@@ -53,7 +61,7 @@
         public virtual bool IsConsumable { get { return true; } }
 
         /// <summary>
-        /// 
+        /// Affiche l'objet dans la pièce
         /// </summary>
         public void Print()
         {

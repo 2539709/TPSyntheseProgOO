@@ -1,12 +1,15 @@
 ﻿namespace TPSyntheseProgOO
 {
+    /// <summary>
+    /// Représente le donjon, gère la navigation entre les pièces et la progression de la partie
+    /// </summary>
     class Dungeon
-    {   
+    {
         /// <summary>
-        /// 
+        /// Constructeur qui charge toutes les pièces du donjon
         /// </summary>
-        /// <param name="folderPath"></param>
-        /// <param name="hero"></param>
+        /// <param name="folderPath">Le chemin du dossier contenant les fichiers de pièces</param>
+        /// <param name="hero">Le héros sélectionné pour la partie</param>
         public Dungeon(string folderPath, Hero hero)
         {
             _hero = hero;
@@ -17,7 +20,9 @@
             
         }
 
-        
+        /// <summary>
+        /// Lance la boucle principale du jeu jusqu'à la victoire ou la mort du héros
+        /// </summary>
         public void Play()
         {
             int currentRoom = 0;
@@ -46,6 +51,7 @@
             Console.ReadKey();
         }
 
+        // Les attributs
         private const int PieceNumber = 10;
         private Stack<int> _history = new();
         private Room[] _rooms = new Room[PieceNumber];

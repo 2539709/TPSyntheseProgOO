@@ -1,21 +1,27 @@
 ﻿namespace TPSyntheseProgOO
 {
+    /// <summary>
+    /// Gère l'inventaire d'un héros
+    /// </summary>
     class Inventory
     {
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public Inventory()
         {
             
         }
 
         /// <summary>
-        /// 
+        /// Indique si l'inventaire est vide
         /// </summary>
         public bool IsEmpty { get { return _items.Count == 0; } }
 
         /// <summary>
-        /// Ajoute un item dans la liste
+        /// Ajoute un item dans la liste, ou incrémente sa quantité s'il est déjà présent
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="item">L'item à ajouter</param>
         public void Add(Item item)
         {
             int index = _items.IndexOf(item);
@@ -51,6 +57,11 @@
 
         }
 
+        /// <summary>
+        /// Utilise un item de l'inventaire et le retire s'il est consommable
+        /// </summary>
+        /// <param name="index">L'index de l'item à utiliser</param>
+        /// <param name="hero">Le héros qui utilise l'item</param>
         public void UseItem(int index, Hero hero)
         {
             if (index < 0 || index >= _items.Count)

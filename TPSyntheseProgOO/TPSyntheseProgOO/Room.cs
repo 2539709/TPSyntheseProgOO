@@ -2,6 +2,9 @@
 
 namespace TPSyntheseProgOO
 {
+    /// <summary>
+    /// Représente une pièce du donjon, avec ses connexions, son ennemi et ses objets
+    /// </summary>
     class Room
     {
         /// <summary>
@@ -199,7 +202,7 @@ namespace TPSyntheseProgOO
             return 0;
         }
 
-        // Méthode qui permet d'ajouter une virgule ou pas à la fin d'un text
+        // Méthode qui permet d'ajouter une virgule ou pas à la fin d'un texte
         private string AddVirgule(string text)
         {
             if (text != "")
