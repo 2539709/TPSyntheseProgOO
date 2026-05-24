@@ -24,7 +24,7 @@
         public override void ApplyEffect(Hero hero)
         {
             hero.AddLifePoints(_lifePoints);
-            Console.WriteLine($"Vous buvez {Article}{Name}, votre vie est maintenant de {hero.LifePoints}");
+            Console.WriteLine($"Vous buvez {Article}{Name}, votre niveau de vie est maintenant de {hero.LifePoints}");
         }
 
         /// <summary>

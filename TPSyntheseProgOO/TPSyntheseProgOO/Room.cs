@@ -125,30 +125,30 @@ namespace TPSyntheseProgOO
                 }
 
                 // Mini-menu
-                Console.WriteLine("\nI) Voir l'inventaire");
+                Console.WriteLine("\n I) Voir l'inventaire");
                 if (_enemy != null && _enemy.LifePoints > 0)
                 {
-                    Console.WriteLine("C) Combattre");
+                    Console.WriteLine(" C) Combattre");
                 }
                 if (_items.Count > 0)
                 {
-                    Console.WriteLine("O) Ramasser les objets");
+                    Console.WriteLine(" O) Ramasser les objets");
                 }
                 if (_leftRoom != -1)
                 {
-                    Console.WriteLine("G) Aller à gauche");
+                    Console.WriteLine(" G) Aller à gauche");
                 }
                 if (_forwardRoom != -1)
                 {
-                    Console.WriteLine("A) Aller en avant");
+                    Console.WriteLine(" A) Aller en avant");
                 }
                 if (_rightRoom != -1)
                 {
-                    Console.WriteLine("D) Aller à droite");
+                    Console.WriteLine(" D) Aller à droite");
                 }
                 if (canGoBack)
                 {
-                    Console.WriteLine("R) Retourner à la pièce précédente");
+                    Console.WriteLine(" R) Retourner à la pièce précédente");
                 }
 
                 Console.Write("\n> ");
@@ -168,13 +168,13 @@ namespace TPSyntheseProgOO
                             if (int.TryParse(tempInv, out choixInventaire) && choixInventaire != 0)
                             {
                                 hero.Inventory.UseItem(choixInventaire - 1, hero);
+                                if (!hero.HasWon && hero.LifePoints > 0)
+                                {
+                                    Console.WriteLine("Appuyer sur une touche pour continuer...");
+                                    Console.ReadKey();
+                                }
                             }
-                        }
-                        if (!hero.HasWon && hero.LifePoints > 0)
-                        {
-                            Console.WriteLine("Appuyer sur une touche pour continuer...");
-                            Console.ReadKey();
-                        }
+                        }                       
                         break;
                     case "C":
                         Console.Clear();
