@@ -10,6 +10,7 @@
         /// </summary>
         /// <param name="name">Le nom de l'ennemi</param>
         /// <param name="article">L'article défini associé au nom (ex: "l'", "le ")</param>
+        /// <param name="indefiniteArticle">L'article indéfini associé au nom (ex: "un ", "une ")</param>
         /// <param name="lifePoints">Les points de vie de départ</param>
         /// <param name="strengthPoints">Les points de force de départ</param>
         protected Enemy(string name, string article, string indefiniteArticle, int lifePoints, int strengthPoints) : 
