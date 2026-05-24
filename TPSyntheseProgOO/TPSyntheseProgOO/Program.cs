@@ -81,5 +81,5 @@ try
 }
 catch (Exception)
 {
-    Console.WriteLine("Bug inattendu");
+    Console.WriteLine("ERREUR: Une erreur inattendue s'est produite.");
 }
