@@ -11,6 +11,7 @@
         public override void ApplyEffect(Hero hero)
         {
             hero.AddProtection(ProtectionPoints);
+            Console.WriteLine($"Vous portez {Article}{Name}, votre protection est maintenant de {hero.ProtectionPoints} ");
         }
 
         public int ProtectionPoints { get { return _protectionPoints; } }

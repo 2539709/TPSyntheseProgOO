@@ -38,15 +38,10 @@
                 }
 
             }
-            if (_hero.HasWon)
-            {
-                Console.WriteLine("Félicitations, vous avez gagné !");
-            }
-            else
+            if (!_hero.HasWon)
             {
                 Console.WriteLine("\nPartie terminée, vous êtes mort au combat");
             }
-
             Console.WriteLine("Appuyez sur une touche pour continuer...");
             Console.ReadKey();
         }

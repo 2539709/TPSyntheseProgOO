@@ -20,6 +20,7 @@
                 return;
             }
             hero.AddMagicPoints(MagicPoints);
+            Console.WriteLine($"Vous utilisez: {Article}{Name}, vos points de magie sont maintenant de {hero.MagicPoints}");
         }
 
         public int MagicPoints { get { return _magicPoints; } }

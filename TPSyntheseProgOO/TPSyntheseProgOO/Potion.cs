@@ -9,8 +9,8 @@
         }
         public override void ApplyEffect(Hero hero)
         {
-            hero.AddLifePoints(LifePoints);
-           
+            hero.AddLifePoints(_lifePoints);
+            Console.WriteLine($"Vous buvez {Article}{Name}, votre vie est maintenant de {hero.LifePoints}");
         }
 
         public int LifePoints { get { return _lifePoints; } }

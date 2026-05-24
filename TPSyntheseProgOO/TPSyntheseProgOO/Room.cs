@@ -64,6 +64,7 @@ namespace TPSyntheseProgOO
                     }
                     itemLine = input.ReadLine();
                 }
+                _items.Sort();
 
             }
         }

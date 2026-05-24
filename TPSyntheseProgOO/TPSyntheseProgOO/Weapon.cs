@@ -16,6 +16,7 @@
                 return;
             }
             hero.EquipWeapon(this);
+            Console.WriteLine($"Vous utilisez {Article}{Name}, votre force est maintenant de {hero.StrengthPoints}");
         }
 
         public override bool IsConsumable { get { return false; } }

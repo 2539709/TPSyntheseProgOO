@@ -52,7 +52,7 @@
         /// <summary>
         /// 
         /// </summary>
-        public int MagicPoints { get { return _magicPoints; } }
+        public override int MagicPoints { get { return _magicPoints; } }
 
         /// <summary>
         /// 

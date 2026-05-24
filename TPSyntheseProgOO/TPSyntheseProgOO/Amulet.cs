@@ -10,6 +10,7 @@
         public override void ApplyEffect(Hero hero)
         {
             hero.Win();
+            Console.WriteLine($"Félicitations, vous avez trouvé {Article}{Name}!");
         }
     }
 }

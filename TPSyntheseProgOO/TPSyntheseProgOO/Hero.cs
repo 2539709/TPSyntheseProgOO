@@ -52,6 +52,11 @@
         /// <summary>
         /// 
         /// </summary>
+        public virtual int MagicPoints { get { return 0; } }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public Inventory Inventory { get; }
 
         /// <summary>
