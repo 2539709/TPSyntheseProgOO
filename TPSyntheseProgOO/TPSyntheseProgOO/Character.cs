@@ -64,10 +64,11 @@
         /// Permet à un character d'attaquer
         /// </summary>
         /// <param name="target">La cible qui se fait attaquer</param>
-        public void Attack(Character target)
+        public int Attack(Character target)
         {
             int damage = target.DamageReceived(AttackDamage());
             target.TakeDamage(damage);
+            return damage;
         }
 
         /// <summary>

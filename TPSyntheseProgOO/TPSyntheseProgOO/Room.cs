@@ -187,7 +187,7 @@ namespace TPSyntheseProgOO
                         if (_enemy != null && _enemy.LifePoints > 0)
                         {
                             CombatEngine.Fight(hero, _enemy);
-                            Console.WriteLine("Appuyer sur une touche pour continuer...");
+                            Console.WriteLine("\nAppuyer sur une touche pour continuer...");
                             Console.ReadKey();
                         }
                         break;
@@ -199,10 +199,39 @@ namespace TPSyntheseProgOO
                         }
                         _items.Clear();
                         break;
-                    case "G": return _leftRoom;
-                    case "A": return _forwardRoom;
-                    case "D": return _rightRoom;
-                    case "R": return -1;
+                    case "G":
+                        if (_leftRoom != -1)
+                        {
+                            return _leftRoom;
+                        }                            
+                        break;
+                    case "A":
+                        if (_forwardRoom != -1)
+                        {
+                            return _forwardRoom;
+                        }                           
+                        break;
+                    case "D":
+                        if (_rightRoom != -1)
+                        {
+                            return _rightRoom;
+                        }                           
+                        break;
+                    case "R":
+                        if (canGoBack)
+                        {
+                            return -1;
+                        }                           
+                        break;
+                    default:
+                        break;
+                }
+
+                if (choix != "I" && choix != "C" && choix != "O")
+                {
+                    Console.WriteLine("Choix invalide");
+                    Console.WriteLine("Appuyez sur une touche pour continuer...");
+                    Console.ReadKey();
                 }
             }
             return 0;
