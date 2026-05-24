@@ -165,7 +165,13 @@ namespace TPSyntheseProgOO
                             Console.Write("\nChoix: ");
                             string? tempInv = Console.ReadLine();
                             int choixInventaire;
-                            if (int.TryParse(tempInv, out choixInventaire) && choixInventaire != 0)
+                            if (!int.TryParse(tempInv, out choixInventaire))
+                            {
+                                Console.WriteLine("Choix invalide");
+                                Console.WriteLine("Appuyer sur une touche pour continuer...");
+                                Console.ReadKey();
+                            }
+                            else if (choixInventaire != 0)
                             {
                                 hero.Inventory.UseItem(choixInventaire - 1, hero);
                                 if (!hero.HasWon && hero.LifePoints > 0)
@@ -174,7 +180,7 @@ namespace TPSyntheseProgOO
                                     Console.ReadKey();
                                 }
                             }
-                        }                       
+                        }
                         break;
                     case "C":
                         Console.Clear();
