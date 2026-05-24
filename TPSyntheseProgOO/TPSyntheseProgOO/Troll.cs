@@ -8,7 +8,7 @@
         /// <summary>
         /// Constructeur
         /// </summary>
-        public Troll() : base ("troll", "le ", StartingLifePoints, StartingStrengthPoints )
+        public Troll() : base("troll", "le ", "un ", StartingLifePoints, StartingStrengthPoints)
         {
             
         }

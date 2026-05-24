@@ -8,10 +8,11 @@
         /// <summary>
         /// Constructeur
         /// </summary>
-        public Orc() : 
-            base("orque", "l'", StartingLifePoints, StartingStrengthPoints)
+        public Orc() :
+            base("orque", "l'", "un ", StartingLifePoints, StartingStrengthPoints)
+
         {
-            
+
         }
 
         /// <summary>

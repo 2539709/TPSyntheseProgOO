@@ -12,7 +12,7 @@
         /// <param name="enemy">L'ennemi à combattre</param>
         public static void Fight(Hero hero, Enemy enemy)
         {
-            string title = $"=   Combat entre {hero.Name} et {enemy.Name}   =";
+            string title = $"=   Combat entre {hero.Name} et {enemy.IndefiniteArticle}{enemy.Name}   =";
             string ligne = new string('=', title.Length);
 
             while (hero.LifePoints > 0 && enemy.LifePoints > 0)
@@ -30,8 +30,15 @@
                 hero.Attack(enemy);
                 int damage = enemyLifePointsBefore - enemy.LifePoints;
                 Console.WriteLine($"Attaque de {hero.Name}");
-                Console.WriteLine($"  Dommage: {damage}");
-
+                if (damage == 0)
+                {
+                    Console.WriteLine("  Attaque esquivée, aucun dommage infligé");
+                }                   
+                else
+                {
+                    Console.WriteLine($"  Dommage: {damage}");
+                }
+                   
                 if (enemy.LifePoints <= 0)
                 {
                     break;
@@ -52,15 +59,8 @@
                 int heroLifePointsBefore = hero.LifePoints;
                 enemy.Attack(hero);
                 int damageHero = heroLifePointsBefore - hero.LifePoints;
-                Console.WriteLine($"Attaque de {enemy.Name}");
-                if (damageHero == 0)
-                {
-                    Console.WriteLine("  Attaque esquivée, aucun dommage infligé");
-                }
-                else
-                {
-                    Console.WriteLine($"  Dommage: {damageHero}");
-                }                    
+                Console.WriteLine($"Attaque de {enemy.Article}{enemy.Name}");
+                Console.WriteLine($"  Dommage: {damageHero}");                    
                 if (hero.LifePoints > 0)
                 {
                     Console.WriteLine("\nAppuyer sur une touche pour continuer...");

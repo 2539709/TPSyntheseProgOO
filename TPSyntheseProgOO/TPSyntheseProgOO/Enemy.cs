@@ -12,13 +12,15 @@
         /// <param name="article">L'article défini associé au nom (ex: "l'", "le ")</param>
         /// <param name="lifePoints">Les points de vie de départ</param>
         /// <param name="strengthPoints">Les points de force de départ</param>
-        protected Enemy(string name, string article, int lifePoints, int strengthPoints) : 
+        protected Enemy(string name, string article, string indefiniteArticle, int lifePoints, int strengthPoints) : 
             base(name, lifePoints, strengthPoints)
         {
             _article = article;
+            _indefiniteArticle = indefiniteArticle;
         }
 
         public string Article { get { return _article; } }
+        public string IndefiniteArticle { get { return _indefiniteArticle; } }
 
         /// <summary>
         /// Retourne l'article contracté avec "de" pour le message de défaite
@@ -27,6 +29,7 @@
 
         // Attribut
         private readonly string _article;
+        private readonly string _indefiniteArticle;
 
     }
 }

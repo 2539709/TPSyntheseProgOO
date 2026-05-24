@@ -9,7 +9,7 @@
         /// Constructeur
         /// </summary>
         public Assassin() :
-            base ("assassin", "l'", StartingLifePoints, StartingStrengthPoints)
+            base("assassin", "l'", "un ", StartingLifePoints, StartingStrengthPoints)
         {
             
         }
