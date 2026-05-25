@@ -27,7 +27,7 @@
                 Console.WriteLine();
 
                 int damage = hero.Attack(enemy);
-                Console.WriteLine($"Attaque de {hero.Name}");
+                Console.WriteLine($"Attaque de {hero}");
                 if (damage == 0)
                 {
                     Console.WriteLine("  Attaque esquivée, aucun dommage infligé");
@@ -55,7 +55,7 @@
                 Console.WriteLine();
 
                 int damageHero = enemy.Attack(hero);
-                Console.WriteLine($"Attaque de {enemy.Article}{enemy.Name}");
+                Console.WriteLine($"Attaque de {enemy}");
                 Console.WriteLine($"  Dommage: {damageHero}");                    
                 if (hero.LifePoints > 0)
                 {
@@ -72,7 +72,7 @@
 
             else
             {
-                Console.WriteLine($"Défaite de {hero.Name}");
+                Console.WriteLine($"Défaite de {hero}");
             }
                 
         }

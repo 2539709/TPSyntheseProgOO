@@ -83,6 +83,14 @@
         protected abstract int DamageReceived(int damage);
 
 
+        /// <summary>
+        /// Retourne le nom du personnage
+        /// </summary>
+        public override string ToString()
+        {
+            return Name;
+        }
+
         // Les attributs
         private int _lifePoints;
         private int _strengthPoints;

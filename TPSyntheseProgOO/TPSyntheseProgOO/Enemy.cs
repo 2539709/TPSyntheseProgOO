@@ -35,6 +35,14 @@
         /// </summary>
         public string DefeatArticle { get { return _article == "le " ? "du " : "de " + _article; } }
 
+        /// <summary>
+        /// Retourne l'article défini suivi du nom de l'ennemi (ex: "l'assassin", "le troll")
+        /// </summary>
+        public override string ToString()
+        {
+            return Article + Name;
+        }
+
         // Attribut
         private readonly string _article;
         private readonly string _indefiniteArticle;
