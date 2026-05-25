@@ -181,6 +181,11 @@ namespace TPSyntheseProgOO
                                 }
                             }
                         }
+                        else
+                        {
+                            Console.WriteLine("Appuyez sur une touche pour continuer...");
+                            Console.ReadKey();
+                        }
                         break;
                     case "C":
                         Console.Clear();
