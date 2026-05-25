@@ -15,7 +15,7 @@
         }
 
         /// <summary>
-        /// Retourne les dommages infligés : valeur aléatoire entre la moitié et le double de la force
+        /// Retourne les dommages infligés : valeur aléatoire entre la moitié et une fois et demie la force
         /// </summary>
         protected override int AttackDamage()
         {

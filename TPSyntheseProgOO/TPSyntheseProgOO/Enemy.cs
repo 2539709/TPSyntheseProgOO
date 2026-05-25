@@ -20,7 +20,14 @@
             _indefiniteArticle = indefiniteArticle;
         }
 
+        /// <summary>
+        /// L'article défini associé au nom de l'ennemi
+        /// </summary>
         public string Article { get { return _article; } }
+
+        /// <summary>
+        /// L'article indéfini associé au nom de l'ennemi
+        /// </summary>
         public string IndefiniteArticle { get { return _indefiniteArticle; } }
 
         /// <summary>

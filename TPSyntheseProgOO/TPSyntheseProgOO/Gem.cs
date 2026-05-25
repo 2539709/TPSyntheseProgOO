@@ -37,7 +37,7 @@
         /// </summary>
         public int MagicPoints { get { return _magicPoints; } }
 
-        //Attributs
+        // Les attributs
         private readonly int _magicPoints;
     }
 }

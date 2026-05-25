@@ -16,7 +16,7 @@
             _article = article;
         }
 
-        // Les propriétées
+        // Les propriétés
         public string Name { get { return _name; } }
         public string Article { get { return _article; } }
 
